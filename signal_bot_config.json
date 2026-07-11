@@ -1,0 +1,123 @@
+{
+  "bot_type": "high_accuracy_signal",
+  "description": "80-90% Accurate Buy/Sell Signals Only - No Auto Trading",
+  
+  "forex_pairs": [
+    "EURUSD",
+    "GBPUSD",
+    "USDJPY",
+    "AUDUSD",
+    "NZDUSD",
+    "USDCAD",
+    "USDCHF",
+    "EURJPY",
+    "GBPJPY",
+    "EURCAD"
+  ],
+  
+  "commodities": {
+    "precious_metals": [
+      "XAUUSD",
+      "XAGUSD"
+    ],
+    "description": "XAUUSD = Gold/USD, XAGUSD = Silver/USD"
+  },
+  
+  "cryptocurrencies": [
+    "BTCUSD",
+    "ETHUSD",
+    "LTCUSD",
+    "XRPUSD",
+    "BCHUSD"
+  ],
+  
+  "indices": [
+    "SPX500",
+    "NDX100",
+    "DAX40",
+    "FTSE100"
+  ],
+  
+  "timeframes": [
+    "M5",
+    "M15",
+    "M30",
+    "H1",
+    "H4",
+    "D1"
+  ],
+  
+  "current_timeframe": "M15",
+  
+  "signal_settings": {
+    "confidence_threshold": 75,
+    "min_accuracy": 80,
+    "risk_percent_per_trade": 2,
+    "risk_reward_ratio": "1:2"
+  },
+  
+  "technical_indicators": {
+    "RSI": {
+      "period": 14,
+      "weight": 25,
+      "oversold": 30,
+      "overbought": 70
+    },
+    "MACD": {
+      "fast": 12,
+      "slow": 26,
+      "signal": 9,
+      "weight": 25
+    },
+    "Bollinger_Bands": {
+      "period": 20,
+      "std_dev": 2,
+      "weight": 20
+    },
+    "Stochastic": {
+      "period": 14,
+      "weight": 15,
+      "oversold": 20,
+      "overbought": 80
+    },
+    "ADX": {
+      "period": 14,
+      "weight": 15,
+      "weak_trend": 20,
+      "strong_trend": 40
+    }
+  },
+  
+  "notification_settings": {
+    "email_alerts": false,
+    "sms_alerts": false,
+    "browser_notifications": true,
+    "log_to_file": true,
+    "sound_alert": true
+  },
+  
+  "trading_hours": {
+    "forex": {
+      "sydney_open": "22:00",
+      "tokyo_open": "00:00",
+      "london_open": "08:00",
+      "newyork_open": "13:00",
+      "london_close": "16:00",
+      "newyork_close": "21:00"
+    }
+  },
+  
+  "api_settings": {
+    "data_source": "live_market_feed",
+    "refresh_interval_seconds": 900,
+    "candle_history": 100,
+    "support_resistance_lookback": 20
+  },
+  
+  "output_files": {
+    "signals_csv": "high_accuracy_signals.csv",
+    "analysis_log": "analysis_log.log",
+    "trade_ideas": "trade_ideas.txt",
+    "daily_report": "daily_report.txt"
+  }
+}
